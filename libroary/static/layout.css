@@ -1,0 +1,84 @@
+/* Farben:
+ * basis: #6775FF
+ * lila hell: #818CFF
+ * lila dunkel: #1D224F
+ * gelb hell: #FFDE67
+ * gelb dunkel: #B29425 
+ */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #1D224F;
+    background: #818CFF;
+}
+
+.icon {
+    font-family: FontAwesome;
+    font-style: normal;
+}
+
+.nav_bar_icon {
+    text-align: center;
+    width: 1.5em;
+    font-size: 160%;
+}
+
+#nav_bar_icon_home::before {
+    content: "\f015";
+}
+
+#nav_bar_icon_book::before {
+    content: "\f008";
+}
+
+#nav_bar_icon_dvd::before {
+    content: "\f26c";
+}
+
+.nav_bar_icon_container {
+    text-align: center;
+    padding: 0.5em;
+    display: block;
+    float: left;
+    width: 2em;
+    height: 2em;
+    line-height: 1.4em;
+    margin: 0em 0.2em 0em 0.2em;
+}
+
+.nav_bar_icon_text {
+    font-size: 60%;
+}
+
+.nav_bar {
+    position: relative;
+    left: 50%;
+    margin-left: -4.5em;
+}
+
+#header_bar {
+    font-size: 120%;
+    width: 100%;
+    height: 3em;
+    color: #FFDE67;
+    background: #6775FF;
+}
+
+#content {
+    padding: 1em;
+    margin: 1em;
+    color: #1D224F;
+    border: 1px solid #1D224F;
+}
+
+#footer_bar {
+    position: absolute;
+    bottom: 0em;
+    padding: 0.2em;
+    font-size: 70%;
+    width: 100%;
+    height: 1em;
+    color: #FFDE67;
+    background: #6775FF;
+}

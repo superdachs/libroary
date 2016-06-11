@@ -8,6 +8,7 @@ from inventory.models import Media
 from inventory.models import Shelf
 from inventory.models import Tag
 from inventory.models import Room
+from inventory.models import Genre
 
 admin.site.register(Author)
 admin.site.register(Book)
@@ -18,4 +19,5 @@ admin.site.register(Language)
 admin.site.register(Shelf)
 admin.site.register(Tag)
 admin.site.register(Room)
+admin.site.register(Genre)
 
