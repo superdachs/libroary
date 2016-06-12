@@ -10,6 +10,7 @@ from inventory.models import Media
 from inventory.models import Room
 from inventory.models import Shelf
 from inventory.models import Tag
+from inventory.models import Music
 
 def listview(request, items_from_db):
     items = []
@@ -53,4 +54,23 @@ def home(request):
 
     return listview(request, items_from_db)
     
-    
+def books(request):
+    items_from_db = []
+    books = Book.objects.all()
+    for b in books:
+        items_from_db.append(b)
+    return listview(request, items_from_db)
+
+def dvds(request):
+    items_from_db = []
+    dvds = DVD.objects.all()
+    for m in dvds:
+        items_from_db.append(m)
+    return listview(request, items_from_db)
+
+def music(request):
+    items_from_db = []
+    music = Music.objects.all()
+    for m in music:
+        items_from_db.append(m)
+    return listview(request, items_from_db)

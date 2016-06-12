@@ -79,5 +79,40 @@ class DVD(Media):
     
     def __str__(self):
         return self.title + " (" + self.author.name + " " + self.author.last_name + ")"
- 
+
+class Band(models.Model):
+    name = models.CharField(max_length=255)
+    foundet = models.DateField()
+    disbanded = models.DateField()
+    country = models.ForeignKey(Language)
+
+    def __str__(self):
+        return self.name
+
+class Interpret(Author):
+    band = models.ManyToManyField(Band)
+
+    def __str__(self):
+        return self.name + " " + self.last_name + " - " + self.band.name
+
+class Title(models.Model):
+    name = models.CharField(max_length=255)
+    interpret = models.ForeignKey(Interpret)
+    length_hour = models.IntegerField()
+    length_minutes = models.IntegerField()
+    length_seconds = models.IntegerField()
+
+    def __str__(self):
+        return self.name
+
+class Music(Media):
+    category = "music"
+    languages = models.ManyToManyField(Language)
+    media = models.CharField(max_length=30)
+    media_tyoe = models.CharField(max_length=30)
+    band = models.ForeignKey(Band, null=True, blank=True)
+    titles = models.ManyToManyField(Title)
+
+    def __str__(self):
+        return self.name + " (" + self.band + ")"
 

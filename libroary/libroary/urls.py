@@ -21,4 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', 'inventory.views.home', name='home'),
+    url(r'^movies/$', 'inventory.views.dvds', name='movies'),
+    url(r'^books/$', 'inventory.views.books', name='books'),
+    url(r'^music/$', 'inventory.views.music', name='music'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
