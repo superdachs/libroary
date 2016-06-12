@@ -8,29 +8,177 @@
     <body>
         <div id="header_bar">
             <div class="nav_bar">
-                <a class="nav_bar_icon_container">
+                <a class="nav_bar_icon_container" href="/">
                     <i class="icon nav_bar_icon" id="nav_bar_icon_home"></i>
                     <span class="nav_bar_icon_text">Home</span>
                 </a> 
-                <a class="nav_bar_icon_container">
+                <a class="nav_bar_icon_container" href="./books/">
                     <i class="icon nav_bar_icon" id="nav_bar_icon_book"></i>
-                    <span class="nav_bar_icon_text">B&uumlcher</span>
+                    <span class="nav_bar_icon_text">Books</span>
                 </a> 
-                <a class="nav_bar_icon_container">
+                <a class="nav_bar_icon_container" href="./dvds/">
                     <i class="icon nav_bar_icon" id="nav_bar_icon_dvd"></i>
-                    <span class="nav_bar_icon_text">Filme</span>
+                    <span class="nav_bar_icon_text">Movies</span>
                 </a> 
+                <a class="nav_bar_icon_container" href="./music/">
+                    <i class="icon nav_bar_icon" id="nav_bar_icon_music"></i>
+                    <span class="nav_bar_icon_text">Music</span>
+                </a> 
+                <a class="nav_bar_icon_container" href="./games/">
+                    <i class="icon nav_bar_icon" id="nav_bar_icon_game"></i>
+                    <span class="nav_bar_icon_text">Games</span>
+                </a> 
+                <a class="nav_bar_icon_container" href="./magazines/">
+                    <i class="icon nav_bar_icon" id="nav_bar_icon_magazine"></i>
+                    <span class="nav_bar_icon_text">Magazines</span>
+                </a> 
+
             </div>
+            <div class="search_bar">
+                <form type="get" action="/search">
+                    <input class="search_bar_input" type="text" name="q">
+                    </input>
+                    <button class="search_bar_button" type="submit">
+                        <i class="icon nav_bar_icon" id="search_bar_icon_search"> </i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="community_bar">
+                <a class="nav_bar_icon_container community_bar_icon_container" href="./admin/">
+                    <i class="icon nav_bar_icon" id="community_bar_icon_admin"></i>
+                </a> 
+                <a class="nav_bar_icon_container community_bar_icon_container" href="https://github.com/superdachs/libroary">
+                    <i class="icon nav_bar_icon" id="community_bar_icon_github"></i>
+                </a> 
+                <!--<a class="nav_bar_icon_container community_bar_icon_container">
+                    <i class="icon nav_bar_icon" id="community_bar_icon_facebook"></i>
+                </a> 
+                <a class="nav_bar_icon_container community_bar_icon_container">
+                    <i class="icon nav_bar_icon" id="community_bar_icon_google"></i>
+                </a> 
+                <a class="nav_bar_icon_container community_bar_icon_container">
+                    <i class="icon nav_bar_icon" id="community_bar_icon_twitter"></i>
+                </a>--> 
+            </div>
+
         </div>
 
         <div id="content">
-            blabla</br>
-            blabla</br>
-            blabla</br>
+            <div class="home_media_short_block home_media_short_block_welcome">
+                <h1 class="short_block_header1">
+                    Wellcome
+                </h2>
+                <p class="short_block_paragraph">
+                    Please choose one of the random media given on this site.</br>
+                    You can also browse media by the categories above or search for authors, interprets, genres, actors, years and many more.
+                </p>
+            </div>
+
+            <div class="home_media_short_block home_media_short_block_book">
+                <img class="short_block_cover" src="dasparfum.jpg"></img>
+                <h1 class="short_block_header1">
+                    Das Parfum
+                <h1>
+                <h2 class="short_block_header2">
+                    Patrick S&uumlskind
+                </h2>
+                <p class="short_block_paragraph">
+                    Ein erfreulicher Anachronismus im modischen literarischen Bla-Bla. Ein internationaler
+                    Dauerseller. Seit Erich Maria Remarques <i>Im Westen nichts Neues</i>, also seit 1929,
+                    gelang keinem deutschsprachigen Autor mehr ein solch durchschlagender Erfolg.
+                    <i>Der Spiegel, Hamburg</i>
+                </p>
+            </div>
+
+            <div class="home_media_short_block home_media_short_block_movie">
+                <img class="short_block_cover" src="pulpfiction.jpg"></img>
+                <h1 class="short_block_header1">
+                    Pulp Fiction (1994)
+                </h1>
+                <h2 class="short_block_header2">
+                    Quentin Tarantino
+                </h2>
+                <p class="short_block_paragraph">
+                    Mit lakonischem Humor zeigt die brillante schwarze Komödie eine Gesellschaft, 
+                    die von Brutalität, Dummheit, moralischer Indifferenz und grotesken Zufällen 
+                    beherrscht wird. Bekannte Muster der Trivialkultur und des amerikanischen 
+                    B-Pictures werden auf intelligente Weise variiert und konterkariert. 
+                    Dabei schreckt der Film auch nicht vor exzessiven, wenn auch satirisch 
+                    überspitzten Gewaltszenen zurück, die teilweise nur schwer verdaulich sind.
+                    <i>Lexikon des internationalen Films</i>
+                </p>
+
+            </div>
+            
+            <div class="home_media_short_block home_media_short_block_music">
+                <img class="short_block_cover" src="pink.jpg"></img>
+                <h1 class="short_block_header1">
+                    Missundaztood (2001)
+                </h1>
+                <h2 class="short_block_header2">
+                    Pink
+                </h2>
+                <p class="short_block_paragraph">
+                    M!ssundaztood ist das zweite Album der Pop-Sängerin P!nk, das im Jahr 2001 erschien. 
+                    Das Album wurde weltweit zu einem Erfolg und brachte die Hit-Singles Get the Party 
+                    Started, Don’t Let Me Get Me, Just Like a Pill und Family Portrait hervor. 
+                    Songschreiberin und Produzentin Linda Perry schrieb viele Songs des Albums und war 
+                    Gastsängerin bei dem Lied „Lonely Girl“. 
+                    Das Album verkaufte sich weltweit 13 Millionen mal.
+                    <i>Lexikon des internationalen Films</i>
+                </p>
+
+           
+            </div>
+            
+            <div class="home_media_short_block home_media_short_block_game">
+                <img class="short_block_cover" src="cc.jpg"></img>
+                <h1 class="short_block_header1">
+                    Command and Conquer: Red Alert (1996)
+                </h1>
+                <h2 class="short_block_header2">
+                    Westwood
+                </h2>
+                <p class="short_block_paragraph">
+                    Command & Conquer: Red Alert is a real-time strategy computer game of the 
+                    Command & Conquer franchise, produced by Westwood Studios and released by 
+                    Virgin Interactive in 1996. The second game to bear the "C&C" title, 
+                    Red Alert is the prequel to the original Command & Conquer of 1995,[2][3][4][5] 
+                    and takes place in the alternate early history of Command & Conquer when 
+                    Allied Forces battle an aggressive Soviet Union for control over the European mainland.
+                    <i>Lexikon des internationalen Films</i>
+                </p>
+
+           
+            </div>
+            
+            <div class="home_media_short_block home_media_short_block_magazine">
+                <img class="short_block_cover" src="spiegel.jpg"></img>
+                <h1 class="short_block_header1">
+                    Der Spiegel (1.8.1983)
+                </h1>
+                <h2 class="short_block_header2">
+                    Der neue Partner - Ostpolitiker Strau&suml, Westpolitiker Honecker
+                </h2>
+                <p class="short_block_paragraph">
+                    Franz Josef Strauß versprach die Wende in der Ost-Politik - und führte eine Rolle 
+                    rückwärts vor: Jahrzehntelang hatte der CSU-Chef seine Partei auf Konfrontation 
+                    eingeschworen, nun ließ er sich gleich in drei Ostblockstaaten hofieren. 
+                    Bundeskanzler Helmut Kohl, auf deutsch-deutsche Kontinuität bedacht, 
+                    kommen die Kapriolen zupaß. Doch Strauß-Fans in CSU und Rechtspresse zürnen: 
+                    Sie fühlen sich von dem Bayern verraten.
+                </p>
+
+           
+            </div>
+
+
+
         </div>
 
         <div id="footer_bar">
-            Libroary 0.1 - Copyright Stefan Kauerauf (mail@stefankauerauf.de) 2016
+            Libroary 0.1 - Stefan Kauerauf (libroary@stefankauerauf.de) 2016 - GNU GPLv3 - Books 123 - DVDs 98
         </div>
     </body>
 

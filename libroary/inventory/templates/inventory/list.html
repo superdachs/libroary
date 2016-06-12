@@ -1,0 +1,31 @@
+<!--
+    items
+
+    id
+    category: book, dvd, music, game, magazine
+    title
+    subtitle
+    text
+    image
+    -->
+{% extends "inventory/base.html" %}
+{% block content %}
+
+{% for item in items %}
+
+            <div class="home_media_short_block home_media_short_block_book">
+                <img class="short_block_cover" src="/media/{{ item.image }}"></img>
+                <a href="{{ item.category }}/{{ item.id }}"><h1 class="short_block_header1">
+                    {{ item.title }}
+                    <h1></a>
+                <h2 class="short_block_header2">
+                    {{ item.subtitle }}
+                </h2>
+                <p class="short_block_paragraph">
+                    {{ item.text }}
+                </p>
+            </div>
+
+{% endfor %}
+
+{% endblock %}

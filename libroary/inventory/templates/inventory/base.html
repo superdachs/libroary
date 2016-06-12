@@ -1,0 +1,79 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+    
+    <header>
+        <link rel="stylesheet" type="text/css" href=".{% static 'inventory/layout.css' %}">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    </header>
+    
+    <body>
+        <div id="header_bar">
+            <div class="nav_bar">
+                <a class="nav_bar_icon_container" href="/">
+                    <i class="icon nav_bar_icon" id="nav_bar_icon_home"></i>
+                    <span class="nav_bar_icon_text">Home</span>
+                </a> 
+                <a class="nav_bar_icon_container" href="/books/">
+                    <i class="icon nav_bar_icon" id="nav_bar_icon_book"></i>
+                    <span class="nav_bar_icon_text">Books</span>
+                </a> 
+                <a class="nav_bar_icon_container" href="/dvds/">
+                    <i class="icon nav_bar_icon" id="nav_bar_icon_dvd"></i>
+                    <span class="nav_bar_icon_text">Movies</span>
+                </a> 
+                <a class="nav_bar_icon_container" href="/music/">
+                    <i class="icon nav_bar_icon" id="nav_bar_icon_music"></i>
+                    <span class="nav_bar_icon_text">Music</span>
+                </a> 
+                <a class="nav_bar_icon_container" href="/games/">
+                    <i class="icon nav_bar_icon" id="nav_bar_icon_game"></i>
+                    <span class="nav_bar_icon_text">Games</span>
+                </a> 
+                <a class="nav_bar_icon_container" href="/magazines/">
+                    <i class="icon nav_bar_icon" id="nav_bar_icon_magazine"></i>
+                    <span class="nav_bar_icon_text">Magazines</span>
+                </a> 
+
+            </div>
+            <div class="search_bar">
+                <form type="get" action="/search">
+                    <input class="search_bar_input" type="text" name="q">
+                    </input>
+                    <button class="search_bar_button" type="submit">
+                        <i class="icon nav_bar_icon" id="search_bar_icon_search"> </i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="community_bar">
+                <a class="nav_bar_icon_container community_bar_icon_container" href="./admin/">
+                    <i class="icon nav_bar_icon" id="community_bar_icon_admin"></i>
+                </a> 
+                <a class="nav_bar_icon_container community_bar_icon_container" href="https://github.com/superdachs/libroary">
+                    <i class="icon nav_bar_icon" id="community_bar_icon_github"></i>
+                </a> 
+                <!--<a class="nav_bar_icon_container community_bar_icon_container">
+                    <i class="icon nav_bar_icon" id="community_bar_icon_facebook"></i>
+                </a> 
+                <a class="nav_bar_icon_container community_bar_icon_container">
+                    <i class="icon nav_bar_icon" id="community_bar_icon_google"></i>
+                </a> 
+                <a class="nav_bar_icon_container community_bar_icon_container">
+                    <i class="icon nav_bar_icon" id="community_bar_icon_twitter"></i>
+                </a>--> 
+            </div>
+
+        </div>
+
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <div id="footer_bar">
+            Libroary 0.1 - Stefan Kauerauf (libroary@stefankauerauf.de) 2016 - GNU GPLv3 - Books {{ bookcount }} - DVDs {{ dvdcount }} - Music {{ musiccount }} - Games {{ gamecount }} - Magazines {{ magazinecount }}
+        </div>
+    </body>
+
+</html>
+

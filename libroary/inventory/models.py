@@ -47,6 +47,8 @@ class Media(models.Model):
     release_date = models.DateField()
     tags = models.ManyToManyField(Tag)
     location = models.ForeignKey(Compartment)
+    description = models.TextField()
+    cover = models.ImageField(upload_to="books", null=True, blank=True)
 
 class Genre(models.Model):
     genre = models.CharField(max_length=255)
@@ -55,17 +57,18 @@ class Genre(models.Model):
         return self.genre
 
 class Book(Media):
+    category = "book"
     language = models.ForeignKey(Language)
     country = models.CharField(max_length=255)
     isbn = models.CharField(max_length=255)
     publisher = models.CharField(max_length=255)
     genre = models.ForeignKey(Genre, null=True, blank=True)
-    cover = models.ImageField(upload_to="books", null=True, blank=True)
 
     def __str__(self):
         return self.title 
     
 class DVD(Media):
+    category = "dvd"
     languages = models.ManyToManyField(Language, related_name="audio_lang")
     subtitles = models.ManyToManyField(Language, related_name="sub_lang")
     length_hours = models.IntegerField()
